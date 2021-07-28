@@ -5,7 +5,7 @@ require "test_helper"
 class DgamboaPalindromeTest < Minitest::Test
 
   def test_non_palindrome
-    assert !"apple".palindrome?
+    refute "apple".palindrome?
   end
 
   def test_literal_palindrome
@@ -13,10 +13,10 @@ class DgamboaPalindromeTest < Minitest::Test
   end
 
   def test_mixed_case_palindrome
-    skip
+    assert "Racecar".palindrome?
   end
 
   def test_palindrome_with_punctuation
-    skip
+    assert "Madam, I'm Adam.".palindrome?
   end
 end

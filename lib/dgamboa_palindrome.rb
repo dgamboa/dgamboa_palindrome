@@ -12,6 +12,6 @@ class String
   private
     # Returns content for palindrome testing.
     def processed_content
-      self.downcase
+      self.scan(/[a-z]/i).join.downcase
     end
 end
