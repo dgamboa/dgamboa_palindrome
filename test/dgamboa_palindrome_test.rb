@@ -27,4 +27,9 @@ class DgamboaPalindromeTest < Minitest::Test
   def test_integer_palindrome
     assert 12321.palindrome?
   end
+
+  def test_blank_string_not_a_palindrome
+    refute "".palindrome?
+    refute "  ".palindrome?
+  end
 end
